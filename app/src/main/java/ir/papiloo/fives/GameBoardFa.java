@@ -131,9 +131,6 @@ public class GameBoardFa extends AppCompatActivity implements View.OnClickListen
         letter4.setTypeface(Configs.juneGull);
         letter5 = (TextView)findViewById(R.id.letter5);
         letter5.setTypeface(Configs.juneGull);
-        //-----
-        txtTest = (TextView)findViewById(R.id.txtTest);
-        txtTest.setTypeface(Configs.juneGull);
 
         letterButt1 = (Button)findViewById(R.id.letterButt1);
         letterButt1.setTypeface(Configs.juneGull);
