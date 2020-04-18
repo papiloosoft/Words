@@ -15,7 +15,7 @@ public class Configs extends Application {
 
 
     // SET THE MAXIMUM TIME OF A ROUND
-    public static float roundTime = 10 ;
+    public static float roundTime = 25 ;
 
 
 

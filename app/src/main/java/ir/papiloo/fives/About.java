@@ -39,11 +39,14 @@ public class About extends AppCompatActivity {
         hButt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(About.this, Home.class));
+                finish();
+
             }});
 
 
     };
+
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));

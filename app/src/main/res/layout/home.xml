@@ -103,7 +103,7 @@
         android:textSize="25sp" />
 
     <Button
-        android:id="@+id/btnrate"
+        android:id="@+id/btnRate"
         android:layout_width="110dp"
         android:layout_height="54dp"
         android:layout_below="@+id/hBestTxt"

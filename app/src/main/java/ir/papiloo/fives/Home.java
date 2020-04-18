@@ -71,7 +71,7 @@ public class Home extends AppCompatActivity {
         Button playSan = (Button)findViewById(R.id.btnSangesari);
         Button playMaz = (Button)findViewById(R.id.btnMazani);
         Button btnAbout = (Button)findViewById(R.id.btnAbout);
-        Button berate = (Button)findViewById(R.id.btnrate);
+        Button beRate = (Button)findViewById(R.id.btnRate);
 
         //**************
         playFa.setOnClickListener(new View.OnClickListener() {
@@ -106,23 +106,53 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(Home.this, About.class));
             }});
 
-        berate.setOnClickListener(new View.OnClickListener() {
+        beRate.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                if (mmp.IS_INTERNET_AVAILABLE(Home.this)) {
-                    // Do your stuff
-                    // your codes
-                    final String PACKAGE_NAME = getPackageName();
-                    //String url="https://www.papiloo.ir/documentation/Games/Fives/Papiloo.apk";
-                    String url= "myket://comment?id=" + getPackageName();
-                    Intent intent = new Intent();
-                    intent.setAction(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(url));
-                    startActivity(intent);
-                } else {
+            public void onClick(View view)
+            {
+                try
+                {
+                    if (mmp.IS_INTERNET_AVAILABLE(Home.this))
+                    {
+                        // Do your stuff
+                        // your codes
+                        final String PACKAGE_NAME = getPackageName();
+                        //String url="https://www.papiloo.ir/documentation/Games/Fives/Papiloo.apk";
+                        String url = "myket://comment?id=" + getPackageName();
+                        Intent intent = new Intent();
+                        intent.setAction(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                    }
+
+                else
+                    {
+                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
+                        alertDialog.setTitle("اینترنت");
+                        alertDialog.setMessage("اینترنت وصل نیست");
+                        alertDialog.setIcon(R.drawable.logo);
+                        alertDialog.setPositiveButton("خروج از بازی",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        finish();
+                                    }
+                                });
+//                             alertDialog.setNegativeButton("درباره ما",
+//                            new DialogInterface.OnClickListener()
+//                            {
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    startActivity(new Intent(Home.this, About.class));
+//                                }
+//                            });
+                        alertDialog.show();
+                    }
+                }
+                catch (Exception e)
+                {
                     AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                    alertDialog.setTitle("اینترنت");
-                    alertDialog.setMessage("اینترنت وصل نیست");
+                    alertDialog.setTitle("نظر");
+                    alertDialog.setMessage("بزودی فعال میشود");
                     alertDialog.setIcon(R.drawable.logo);
                     alertDialog.setPositiveButton("خروج از بازی",
                             new DialogInterface.OnClickListener() {
@@ -130,15 +160,18 @@ public class Home extends AppCompatActivity {
                                     finish();
                                 }
                             });
-                    alertDialog.setNegativeButton("درباره ما",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    startActivity(new Intent(Home.this, About.class));
-                                }
-                            });
+//                             alertDialog.setNegativeButton("درباره ما",
+//                            new DialogInterface.OnClickListener()
+//                            {
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    startActivity(new Intent(Home.this, About.class));
+//                                }
+//                            });
                     alertDialog.show();
                 }
+
             }
+
         });
     }
 
@@ -163,44 +196,76 @@ public class Home extends AppCompatActivity {
     public void onBackPressed() {
         AlertDialog.Builder alertDialog1 = new AlertDialog.Builder(Home.this);
         alertDialog1.setTitle("نظر دادن");
-        alertDialog1.setMessage("خوشتان آمد؟ نظر دهید");
+        alertDialog1.setMessage("اگرخوشتان آمد نظر دهید؟");
         alertDialog1.setIcon(R.drawable.logo);
         alertDialog1.setPositiveButton("خروج",
                 new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
+                    public void onClick(DialogInterface dialog, int which)
+                    {
                         finish();
                     }
                 });
-        alertDialog1.setNegativeButton("نظر دادن",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        if (mmp.IS_INTERNET_AVAILABLE(Home.this)) {
-                            // Do your stuff
-                            // your codes
-                            final String PACKAGE_NAME = getPackageName();
-                            //String url="https://www.papiloo.ir/documentation/Games/Fives/Papiloo.apk";
-                            String url= "myket://comment?id=" + getPackageName();
-                            Intent intent = new Intent();
-                            intent.setAction(Intent.ACTION_VIEW);
-                            intent.setData(Uri.parse(url));
-                            startActivity(intent);
-                        } else {
+                alertDialog1.setNegativeButton("نظر دادن",
+                new DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface dialog, int which)
+                    {
+                        try
+                        {
+                            if (mmp.IS_INTERNET_AVAILABLE(Home.this)) {
+                                // Do your stuff
+                                // your codes
+                                final String PACKAGE_NAME = getPackageName();
+                                //String url="https://www.papiloo.ir/documentation/Games/Fives/Papiloo.apk";
+                                String url = "myket://comment?id=" + getPackageName();
+                                Intent intent = new Intent();
+                                intent.setAction(Intent.ACTION_VIEW);
+                                intent.setData(Uri.parse(url));
+                                startActivity(intent);
+                            }
+                            else
+                                {
+                                AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
+                                alertDialog.setTitle("اینترنت");
+                                alertDialog.setMessage("اینترنت وصل نیست");
+                                alertDialog.setIcon(R.drawable.logo);
+                                alertDialog.setPositiveButton("خروج از بازی",
+                                        new DialogInterface.OnClickListener()
+                                        {
+                                            public void onClick(DialogInterface dialog, int which)
+                                            {
+                                                finish();
+                                            }
+                                        });
+                                        alertDialog.setNegativeButton("درباره ما",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                startActivity(new Intent(Home.this, About.class));
+                                            }
+                                        });
+                                alertDialog.show();
+                            }
+                        }
+                        catch (Exception e)
+                        {
                             AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                            alertDialog.setTitle("اینترنت");
-                            alertDialog.setMessage("اینترنت وصل نیست");
+                            alertDialog.setTitle("نظر");
+                            alertDialog.setMessage("بزودی فعال میشود");
                             alertDialog.setIcon(R.drawable.logo);
                             alertDialog.setPositiveButton("خروج از بازی",
-                                    new DialogInterface.OnClickListener() {
+                                    new DialogInterface.OnClickListener()
+                                    {
                                         public void onClick(DialogInterface dialog, int which) {
                                             finish();
                                         }
                                     });
-                            alertDialog.setNegativeButton("درباره ما",
-                                    new DialogInterface.OnClickListener() {
-                                        public void onClick(DialogInterface dialog, int which) {
-                                            startActivity(new Intent(Home.this, About.class));
-                                        }
-                                    });
+//                             alertDialog.setNegativeButton("درباره ما",
+//                            new DialogInterface.OnClickListener()
+//                            {
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    startActivity(new Intent(Home.this, About.class));
+//                                }
+//                            });
                             alertDialog.show();
                         }
                     }
