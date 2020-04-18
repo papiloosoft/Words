@@ -1,9 +1,5 @@
-package ir.papiloo.fives;
+package ir.papiloo.words;
 
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,24 +7,17 @@ import android.content.pm.ActivityInfo;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Color;
 import android.media.MediaPlayer;
-import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.v4.widget.TextViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
-import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
-import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -40,7 +29,7 @@ import java.util.regex.Pattern;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
-public class GameBoardSan extends AppCompatActivity implements View.OnClickListener{
+public class GameBoardSem extends AppCompatActivity implements View.OnClickListener{
 
 
     /* Views */
@@ -67,7 +56,6 @@ public class GameBoardSan extends AppCompatActivity implements View.OnClickListe
     TextView [] letterTxts;
     MediaPlayer mp;
     String hint="";
-
 
     MarshMallowPermission mmp = new MarshMallowPermission(this);
 
@@ -132,7 +120,7 @@ public class GameBoardSan extends AppCompatActivity implements View.OnClickListe
 
         // Get a List array of words
 
-        String [] wordsArr = getResources().getStringArray(R.array.WordsSan);
+        String [] wordsArr = getResources().getStringArray(R.array.WordsSem);
         wordsArray = new ArrayList<String>(Arrays.asList(wordsArr));
         // Log.i("log-", "WORDS ARRAY: " + wordsArray);
 
@@ -522,7 +510,7 @@ public class GameBoardSan extends AppCompatActivity implements View.OnClickListe
     // MARK: - GAME OVER ------------------------------------------------------------
     void gameOver() {
         // Get bestScore
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(GameBoardSan.this);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(GameBoardSem.this);
         Configs.bestScore = prefs.getInt("bestScore", Configs.bestScore);
 
         // Save Best Score
@@ -539,7 +527,7 @@ public class GameBoardSan extends AppCompatActivity implements View.OnClickListe
         playSound("gameOver.mp3");
 
         // Go to Game Over Activity
-        startActivity(new Intent(GameBoardSan.this, GameOver.class));
+        startActivity(new Intent(GameBoardSem.this, GameOver.class));
     }
 
 

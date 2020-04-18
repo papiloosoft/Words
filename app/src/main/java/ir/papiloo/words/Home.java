@@ -1,4 +1,4 @@
-package ir.papiloo.fives;
+package ir.papiloo.words;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -22,11 +22,6 @@ import android.widget.TextView;
 import java.io.ByteArrayOutputStream;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-
-
 
 
 public class Home extends AppCompatActivity {

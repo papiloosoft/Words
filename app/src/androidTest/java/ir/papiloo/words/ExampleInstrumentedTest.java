@@ -1,4 +1,4 @@
-package ir.papiloo.fives;
+package ir.papiloo.words;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

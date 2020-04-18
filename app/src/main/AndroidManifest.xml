@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="ir.papiloo.fives">
+          package="ir.papiloo.words">
 
     <!-- Permissions -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -9,7 +9,7 @@
 
 
     <application
-        android:name=".Configs"
+        android:name="ir.papiloo.words.Configs"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,7 +19,7 @@
 
         <!-- Splash screen -->
         <activity
-            android:name=".SplashScreen"
+            android:name="ir.papiloo.words.SplashScreen"
             android:label="@string/app_name"
             android:noHistory="true"
             android:screenOrientation="fullSensor"
@@ -32,19 +32,19 @@
 
 
         <!-- Other Activities -->
-        <activity android:name=".Home">
+        <activity android:name="ir.papiloo.words.Home">
         </activity>
-        <activity android:name=".GameBoardFa">
+        <activity android:name="ir.papiloo.words.GameBoardFa">
         </activity>
-        <activity android:name=".GameBoardSem">
+        <activity android:name="ir.papiloo.words.GameBoardSem">
         </activity>
-        <activity android:name=".GameBoardSan">
+        <activity android:name="ir.papiloo.words.GameBoardSan">
         </activity>
-        <activity android:name=".GameBoardMaz">
+        <activity android:name="ir.papiloo.words.GameBoardMaz">
         </activity>
-        <activity android:name=".GameOver">
+        <activity android:name="ir.papiloo.words.GameOver">
         </activity>
-        <activity android:name=".About">
+        <activity android:name="ir.papiloo.words.About">
         </activity>
 
     </application>
