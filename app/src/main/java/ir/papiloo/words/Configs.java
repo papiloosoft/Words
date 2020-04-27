@@ -20,7 +20,7 @@ public class Configs extends Application {
 
 
     // SET THE PROGRESS THAT WILL BE TAKEN OFF FROM THE CURRENT PROGRESS EACH TIME YOU GUESS A WORD (NOTE: it must never be equal or more than 100, otherwise it'll reset the progressBar)
-    public static int bonusProgress = 10;
+    public static int bonusProgress = 5;
 
 
 

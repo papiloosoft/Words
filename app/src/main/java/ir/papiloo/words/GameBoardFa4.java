@@ -33,9 +33,9 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListener {
 
     /* Views */
-    TextView sTitleTxt, scoreTxt, letter1, letter2, letter3, letter4, letter5,txtTest;
+    TextView sTitleTxt, scoreTxt, letter1, letter2, letter3, letter4;
     ProgressBar pb;
-    Button letterButt1, letterButt2, letterButt3, letterButt4, letterButt5;
+    Button letterButt1, letterButt2, letterButt3, letterButt4,letterButt5;
 
 
 
@@ -112,7 +112,7 @@ public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListe
 
         // Get a List array of words
 
-        String [] wordsArr = getResources().getStringArray(R.array.WordsFa);
+        String [] wordsArr = getResources().getStringArray(R.array.WordsFa4);
         wordsArray = new ArrayList<String>(Arrays.asList(wordsArr));
         // Log.i("log-", "WORDS ARRAY: " + wordsArray);
 
@@ -130,8 +130,6 @@ public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListe
         letter3.setTypeface(Configs.juneGull);
         letter4 = (TextView)findViewById(R.id.letter4);
         letter4.setTypeface(Configs.juneGull);
-        letter5 = (TextView)findViewById(R.id.letter5);
-        letter5.setTypeface(Configs.juneGull);
 
         letterButt1 = (Button)findViewById(R.id.letterButt1);
         letterButt1.setTypeface(Configs.juneGull);
@@ -146,28 +144,25 @@ public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListe
         letterButt4.setTypeface(Configs.juneGull);
         letterButt4.setOnClickListener(this);
         letterButt5 = (Button)findViewById(R.id.letterButt5);
-        letterButt5.setTypeface(Configs.juneGull);
-        letterButt5.setOnClickListener(this);
+        letterButt5.setVisibility(View.INVISIBLE);
         //----------
         Button btnHint=(Button)findViewById(R.id.btnHint);
         btnHint.setVisibility(View.GONE); // GONE = be soorate kamel barmidarad,INVISIBL = faghat makhfi mikonad
 
         // Make an array of letter buttons
-        letterButtons = new Button[5];
+        letterButtons = new Button[4];
         letterButtons[0] = letterButt1;
         letterButtons[1] = letterButt2;
         letterButtons[2] = letterButt3;
         letterButtons[3] = letterButt4;
-        letterButtons[4] = letterButt5;
 
 
         // Make an array of letters on the top
-        letterTxts = new TextView[5];
+        letterTxts = new TextView[4];
         letterTxts[0] = letter1;
         letterTxts[1] = letter2;
         letterTxts[2] = letter3;
         letterTxts[3] = letter4;
-        letterTxts[4] = letter5;
 
 
 
@@ -210,7 +205,7 @@ public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListe
     // MARK: - RESET LETTER BUTTONS ------------------------------------------------------
     void resetLetterButtons() {
 
-        for (int i = 0; i<5; i++) {
+        for (int i = 0; i<4; i++) {
             letterButtons[i].setEnabled(true);
             letterButtons[i].setBackgroundResource(Configs.circlesArray[randomCircle]);
             letterButtons[i].setTextColor(Color.parseColor("#ffffff"));
@@ -224,7 +219,7 @@ public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListe
 
     // MARK: - RESET LETTERS ON THE TOP ------------------------------------------------------
     void resetLettersTxt() {
-        for (int i = 0; i<5; i++) {
+        for (int i = 0; i<4; i++) {
             letterTxts[i].setText("");
             letterTxts[i].setBackgroundResource(R.drawable.circle_corner_white);
         }
@@ -270,7 +265,7 @@ public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListe
         // Get the complete word as a List of characters
         charArray = new ArrayList<String>();
         String[] chArr = wordStr.split("");
-        for(int i=0; i<6; i++) {
+        for(int i=0; i<5; i++) {
             String c = chArr[i];
             charArray.add(c);
         }
@@ -301,25 +296,22 @@ public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListe
             case 0:
                 letterButtons[1].setText(charArray.get(0));
                 letterButtons[0].setText(charArray.get(1));
-                letterButtons[4].setText(charArray.get(2));
                 letterButtons[2].setText(charArray.get(3));
-                letterButtons[3].setText(charArray.get(4));
+                letterButtons[3].setText(charArray.get(2));
             break;
 
             case 1:
                 letterButtons[3].setText(charArray.get(0));
                 letterButtons[0].setText(charArray.get(1));
-                letterButtons[4].setText(charArray.get(2));
                 letterButtons[1].setText(charArray.get(3));
-                letterButtons[2].setText(charArray.get(4));
+                letterButtons[2].setText(charArray.get(2));
             break;
 
             case 2:
-                letterButtons[4].setText(charArray.get(0));
                 letterButtons[1].setText(charArray.get(1));
                 letterButtons[0].setText(charArray.get(2));
                 letterButtons[3].setText(charArray.get(3));
-                letterButtons[2].setText(charArray.get(4));
+                letterButtons[2].setText(charArray.get(0));
             break;
         }
 
@@ -415,7 +407,7 @@ public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListe
 
 
         // You've tapped all buttons, so check your result
-        if (tapsCount == 4) { checkResult(); }
+        if (tapsCount == 3) { checkResult(); }
 
 
         // Play a sound

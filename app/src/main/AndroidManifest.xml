@@ -46,6 +46,8 @@
         </activity>
         <activity android:name="ir.papiloo.words.About">
         </activity>
+        <activity android:name="ir.papiloo.words.GameBoardFa4">
+        </activity>
 
     </application>
 
