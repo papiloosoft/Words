@@ -33,7 +33,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListener {
 
     /* Views */
-    TextView sTitleTxt, scoreTxt, letter1, letter2, letter3, letter4;
+    TextView sTitleTxt, scoreTxt, letter1, letter2, letter3, letter4,letter5;
     ProgressBar pb;
     Button letterButt1, letterButt2, letterButt3, letterButt4,letterButt5;
 
@@ -130,6 +130,8 @@ public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListe
         letter3.setTypeface(Configs.juneGull);
         letter4 = (TextView)findViewById(R.id.letter4);
         letter4.setTypeface(Configs.juneGull);
+        letter5 = (TextView)findViewById(R.id.letter5);
+        letter5.setVisibility(View.GONE);
 
         letterButt1 = (Button)findViewById(R.id.letterButt1);
         letterButt1.setTypeface(Configs.juneGull);
@@ -144,7 +146,7 @@ public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListe
         letterButt4.setTypeface(Configs.juneGull);
         letterButt4.setOnClickListener(this);
         letterButt5 = (Button)findViewById(R.id.letterButt5);
-        letterButt5.setVisibility(View.INVISIBLE);
+        letterButt5.setVisibility(View.GONE); // in dokmera dar nazar nemigirad
         //----------
         Button btnHint=(Button)findViewById(R.id.btnHint);
         btnHint.setVisibility(View.GONE); // GONE = be soorate kamel barmidarad,INVISIBL = faghat makhfi mikonad
