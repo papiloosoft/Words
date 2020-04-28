@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="ir.papiloo.fives/app" />
-      <module fileurl="file://$PROJECT_DIR$/ir.papiloo.fives.iml" filepath="$PROJECT_DIR$/ir.papiloo.fives.iml" group="ir.papiloo.fives" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="ir.papiloo.words/app" />
+      <module fileurl="file://$PROJECT_DIR$/ir.papiloo.words.iml" filepath="$PROJECT_DIR$/ir.papiloo.words.iml" group="ir.papiloo.words" />
     </modules>
   </component>
 </project>

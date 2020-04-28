@@ -112,7 +112,9 @@
         android:background="@drawable/circle_corner_orange"
         android:text="@string/playAgain"
         android:textColor="#fff"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_alignRight="@+id/goShareButt"
+        android:layout_alignLeft="@+id/goHomeButt" />
 
     <Button
         android:id="@+id/goHomeButt"
@@ -121,7 +123,8 @@
         android:layout_alignStart="@+id/linearLayout5"
         android:layout_below="@+id/goPlayAgain"
         android:layout_marginTop="10dp"
-        android:background="@drawable/home_butt"/>
+        android:background="@drawable/home_butt"
+        android:layout_alignLeft="@+id/linearLayout5" />
 
     <Button
         android:id="@+id/goShareButt"
@@ -130,5 +133,6 @@
         android:layout_alignEnd="@+id/linearLayout5"
         android:layout_below="@+id/goPlayAgain"
         android:layout_marginTop="10dp"
-        android:background="@drawable/share_butt"/>
+        android:background="@drawable/share_butt"
+        android:layout_alignRight="@+id/linearLayout5" />
 </RelativeLayout>

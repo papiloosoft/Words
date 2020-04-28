@@ -191,7 +191,10 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#fff"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/letterButt1"
+            android:gravity="center_horizontal" />
 
         <Button
             android:id="@+id/letterButt1"
@@ -243,7 +246,10 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#fff"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/letterButt1"
+            android:gravity="center_horizontal" />
 
 
         <Button
@@ -263,7 +269,6 @@
             android:id="@+id/goPossibleWordTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="250dp"
 
@@ -278,11 +283,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="307dp"
             android:layout_toEndOf="@+id/btnHint"
-
             android:layout_marginStart="20dp"
             android:textColor="#FFEB3B"
             android:textSize="30sp"
-            />
+            android:layout_toRightOf="@+id/btnHint"
+            android:layout_marginLeft="20dp" />
 
     </RelativeLayout>
 

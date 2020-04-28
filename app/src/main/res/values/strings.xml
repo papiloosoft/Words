@@ -1,6 +1,4 @@
 <resources>
-
-
     <!-- IMPORTANT: REPLACE THE STRING BELOW WITH THE NEW NAME YOU'LL  GIVE TO THIS APP -->
     <string name="app_name">حدس کلمه پاپیلو</string>
     <string name="developer_name">توسعه دهنده:گروه نرم افزاری پاپیلو</string>
@@ -63,9 +61,12 @@
         <item>شیراز.شیراز.شیراز</item>
         <item>سمنان.سمنان.سمنان</item>
 
-
     </string-array>
-
+<string-array name="WordsFa4">
+    <item>پنکه.پنکه.پنکه</item>
+    <item>کلید.کلید.کلید</item>
+    <item>ساعت.ساعت.ساعت</item>
+</string-array>
     <string-array name="WordsSem">
         <item>پلکنه.پِلِکُنِه.پله</item>
         <item>آلشکی.آلِشکی.لپ ها</item>

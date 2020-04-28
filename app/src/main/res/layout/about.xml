@@ -66,12 +66,12 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginTop="480dp"
-        android:layout_below="@+id/letterButt1"
         android:layout_marginEnd="20dp"
         android:layout_toStartOf="@+id/btnInsta"
         android:background="@drawable/ico_whatsapp"
 
-        />
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/btnInsta" />
     <Button
         android:id="@+id/btnTelgram"
         android:layout_width="90dp"
@@ -82,7 +82,7 @@
         android:layout_toStartOf="@+id/btnInsta"
         android:background="@drawable/ico_telegram"
 
-        />
+        android:layout_toLeftOf="@+id/btnInsta" />
     <TextView
         android:id="@+id/textVersion"
         android:layout_width="wrap_content"

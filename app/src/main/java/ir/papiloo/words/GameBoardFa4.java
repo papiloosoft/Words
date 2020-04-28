@@ -30,14 +30,12 @@ import java.util.regex.Pattern;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
-public class GameBoardMaz extends AppCompatActivity implements View.OnClickListener{
-
+public class GameBoardFa4 extends AppCompatActivity implements View.OnClickListener {
 
     /* Views */
-    TextView sTitleTxt, scoreTxt, letter1, letter2, letter3, letter4, letter5,possibleWordTxt,
-            txtHint;
+    TextView sTitleTxt, scoreTxt, letter1, letter2, letter3, letter4, letter5,txtTest;
     ProgressBar pb;
-    Button letterButt1, letterButt2, letterButt3, letterButt4, letterButt5,BtnHint ;
+    Button letterButt1, letterButt2, letterButt3, letterButt4, letterButt5;
 
 
 
@@ -56,9 +54,11 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
     Button [] letterButtons;
     TextView [] letterTxts;
     MediaPlayer mp;
-    String hint="";
+    String hint;
 
     MarshMallowPermission mmp = new MarshMallowPermission(this);
+
+
 
     // ON START() ------------------------------------------------------------------------
     @Override
@@ -88,20 +88,11 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
 
         // Get a random word from words string-array
         getRandomWord();
-
-
     }
 
 
 
-    // Event Click btnHintDelete() ------------------------------------------------------------------------
-        public void btnHintClick(View view)
-        {
-            if(view.getId()==R.id.btnHint)
-            {
-                txtHint.setText(hint);
-            }
-        }
+
 
     // ON CREATE() ---------------------------------------------------------------
     @Override
@@ -121,10 +112,9 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
 
         // Get a List array of words
 
-        String [] wordsArr = getResources().getStringArray(R.array.WordsMaz);
+        String [] wordsArr = getResources().getStringArray(R.array.WordsFa);
         wordsArray = new ArrayList<String>(Arrays.asList(wordsArr));
         // Log.i("log-", "WORDS ARRAY: " + wordsArray);
-
 
 
         // Init Views
@@ -142,9 +132,6 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
         letter4.setTypeface(Configs.juneGull);
         letter5 = (TextView)findViewById(R.id.letter5);
         letter5.setTypeface(Configs.juneGull);
-        //------
-        txtHint=(TextView) findViewById(R.id.txtHint);
-        //------
 
         letterButt1 = (Button)findViewById(R.id.letterButt1);
         letterButt1.setTypeface(Configs.juneGull);
@@ -161,11 +148,9 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
         letterButt5 = (Button)findViewById(R.id.letterButt5);
         letterButt5.setTypeface(Configs.juneGull);
         letterButt5.setOnClickListener(this);
-
-        //-------
-        BtnHint= (Button) findViewById(R.id.btnHint);
-
-
+        //----------
+        Button btnHint=(Button)findViewById(R.id.btnHint);
+        btnHint.setVisibility(View.GONE); // GONE = be soorate kamel barmidarad,INVISIBL = faghat makhfi mikonad
 
         // Make an array of letter buttons
         letterButtons = new Button[5];
@@ -190,9 +175,8 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
 
 
         // MARK: - RESET BUTTON ------------------------------------
-        //Button resetButt = (Button)findViewById(R.id.gbResetButt);
-        Button resetText =(Button) findViewById(R.id.btnDelete);
-        resetText.setOnClickListener(new View.OnClickListener() {
+        Button resetButt = (Button)findViewById(R.id.btnDelete);
+        resetButt.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
               resetWord();
@@ -252,8 +236,6 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
 
     // MARK: - GET A RANDOM WORD ------------------------------------------------------------
     void getRandomWord() {
-        //Clear text Hint
-        txtHint.setText("");
 
         // Get a random circle for letters
         Random r = new Random();
@@ -266,8 +248,6 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
         wordStr = randomWord;
         Log.i("log-", "RANDOM WORD: " + wordStr);
 
-        possibleWordTxt = (TextView)findViewById(R.id.goPossibleWordTxt);
-        possibleWordTxt.setTypeface(Configs.juneGull);
 
         // Get an array of words (if there are multiple words
         Configs.stringsArray = new ArrayList<String>();
@@ -276,20 +256,8 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
             String[] one = wordStr.split(Pattern.quote("."));
             for (String word : one) {
                 Configs.stringsArray.add(word);
-                possibleWordTxt.setText(one[2]);
-                hint=one[1];
-                //txtHint.setText(one[1]);
-
-//                if(btnHint.isPressed()) {
-//                    txtHint.setText(one[1]);
-//                    progress=progress+5;
-//                }
-
-
-
+                hint=one[0];
             }
-
-
             Log.i("log-", "\n\nWORDS ARRAY: " + Configs.stringsArray);
 
         } else {
@@ -385,6 +353,7 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
 
     // MARK: - START GAME TIMER ---------------------------------------------------------------
     void startGameTimer() {
+
         float delay = 10*Configs.roundTime;
 
         gameTimer =  new Timer();
@@ -397,11 +366,12 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
                         progress = progress + 10/Configs.roundTime;
                         pb.setProgress((int) progress);
                         // Log.i("log-", "PROGRESS: " + progress);
-
+                        //txtTest.setText((String)((int) progress));
+                        Log.i("log-", "PROGRESS: " + progress);
                         // TIME ENDED, GAME OVER!
                         if (progress >= 100) {
                             gameTimer.cancel();
-
+                            finish();
                             gameOver();
                         }
             }});}
@@ -477,7 +447,6 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
 
             // Play a sound
             playSound("rightWord.mp3");
-            //playSound("rightWord.mp3");
 
 
             // Update game timer
@@ -511,7 +480,7 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
     // MARK: - GAME OVER ------------------------------------------------------------
     void gameOver() {
         // Get bestScore
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(GameBoardMaz.this);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(GameBoardFa4.this);
         Configs.bestScore = prefs.getInt("bestScore", Configs.bestScore);
 
         // Save Best Score
@@ -521,6 +490,7 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
             if (Configs.bestScore <= Configs.score) {
                 Configs.bestScore = Configs.score;
                 prefs.edit().putInt("bestScore", Configs.bestScore).apply();
+
             }
         }
 
@@ -528,7 +498,7 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
         playSound("gameOver.mp3");
 
         // Go to Game Over Activity
-        startActivity(new Intent(GameBoardMaz.this, GameOver.class));
+        startActivity(new Intent(GameBoardFa4.this, GameOver.class));
     }
 
 
@@ -570,5 +540,7 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
     }
 
 
+    public void btnHintClick(View view) {
 
+    }
 }// @end

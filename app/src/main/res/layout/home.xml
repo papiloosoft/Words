@@ -38,7 +38,8 @@
 
         android:background="@drawable/ico_sem"
         android:textColor="#E33030"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:layout_toLeftOf="@+id/btnFa" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -86,6 +87,18 @@
 
         android:textColor="#FFE33030"
         android:textSize="25sp" />
+    <Button
+        android:id="@+id/btnFa4"
+        android:layout_width="95dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/hBestTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/circle_corner_green"
+        android:text="فارسی 4"
+
+        android:textColor="#FFE33030"
+        android:textSize="25sp" />
     <!--        android:background="@drawable/play_butt"
         android:background="#FFEB3B" -->
 
@@ -100,7 +113,8 @@
         android:layout_marginLeft="-200dp"
         android:background="@drawable/ico_san"
         android:textColor="#FFE33030"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:layout_toLeftOf="@+id/btnFa" />
 
     <Button
         android:id="@+id/btnRate"
@@ -111,7 +125,8 @@
         android:background="@drawable/ico_idea"
         android:textSize="18sp"
         android:layout_toStartOf="@+id/btnFa"
-        android:layout_marginLeft="0dp"/>
+        android:layout_marginLeft="0dp"
+        android:layout_toLeftOf="@+id/btnFa" />
 
     <Button
         android:id="@+id/btnAbout"
@@ -125,6 +140,6 @@
         android:layout_marginLeft="-200dp"
 
 
-        />
+        android:layout_toLeftOf="@+id/btnFa" />
 
 </RelativeLayout>
