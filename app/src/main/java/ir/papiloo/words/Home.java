@@ -62,12 +62,14 @@ public class Home extends AppCompatActivity {
 
         // MARK: - PLAY BUTTON ------------------------------------
         Button playFa = (Button)findViewById(R.id.btnFa);
+        Button playFa4 = (Button)findViewById(R.id.btnFa4);
+        Button playFa3 = (Button)findViewById(R.id.btnFa3);
         Button playSem = (Button)findViewById(R.id.btnSemnani);
         Button playSan = (Button)findViewById(R.id.btnSangesari);
         Button playMaz = (Button)findViewById(R.id.btnMazani);
         Button btnAbout = (Button)findViewById(R.id.btnAbout);
         Button beRate = (Button)findViewById(R.id.btnRate);
-        Button playFa4 = (Button)findViewById(R.id.btnFa4);
+
         //**************
         playFa.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +83,13 @@ public class Home extends AppCompatActivity {
             public void onClick(View view) {
 
                 startActivity(new Intent(Home.this, GameBoardFa4.class));
+            }});
+        //**************
+        playFa3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(Home.this, GameBoardFa3.class));
             }});
         //**************
         playSem.setOnClickListener(new View.OnClickListener() {

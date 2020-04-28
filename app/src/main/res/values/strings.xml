@@ -62,11 +62,17 @@
         <item>سمنان.سمنان.سمنان</item>
 
     </string-array>
-<string-array name="WordsFa4">
+    <string-array name="WordsFa4">
     <item>پنکه.پنکه.پنکه</item>
     <item>کلید.کلید.کلید</item>
     <item>ساعت.ساعت.ساعت</item>
 </string-array>
+    <string-array name="WordsFa3">
+        <item>دست.دست.دست</item>
+        <item>شیر.شیر.شیر</item>
+        <item>نفت.نفت.نفت</item>
+        <item>سیب.سیب.سیب</item>
+    </string-array>
     <string-array name="WordsSem">
         <item>پلکنه.پِلِکُنِه.پله</item>
         <item>آلشکی.آلِشکی.لپ ها</item>
