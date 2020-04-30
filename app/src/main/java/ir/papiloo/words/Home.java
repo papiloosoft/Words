@@ -13,13 +13,16 @@ import android.provider.MediaStore;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -28,7 +31,8 @@ public class Home extends AppCompatActivity {
 
     /* Views */
     TextView bestTxt;
-
+    ListView mList;
+    ArrayList<Item> arrayItem;
 
     /* Variables */
     SharedPreferences prefs;
@@ -56,60 +60,31 @@ public class Home extends AppCompatActivity {
         Configs.bestScore = prefs.getInt("bestScore", Configs.bestScore);
         bestTxt.setText(String.valueOf(Configs.bestScore));
 
+        //*******************************
+        mList = findViewById(R.id.list_view);
 
+        arrayItem = new ArrayList<>();
 
+        CustomAdapter mAdapter = new CustomAdapter(this, arrayItem);
 
+        itemDetails();
 
+        mList.setAdapter(mAdapter);
+        mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //Toast.makeText(MainActivity.this, "Item Number " + i , Toast.LENGTH_SHORT).show();
+                if(i==0) {
+                    startActivity(new Intent(Home.this, GameBoardFa.class));
+                }
+
+            }
+        });
         // MARK: - PLAY BUTTON ------------------------------------
-        Button playFa = (Button)findViewById(R.id.btnFa);
-        Button playFa4 = (Button)findViewById(R.id.btnFa4);
-        Button playFa3 = (Button)findViewById(R.id.btnFa3);
-        Button playSem = (Button)findViewById(R.id.btnSemnani);
-        Button playSan = (Button)findViewById(R.id.btnSangesari);
-        Button playMaz = (Button)findViewById(R.id.btnMazani);
-        Button btnAbout = (Button)findViewById(R.id.btnAbout);
-        Button beRate = (Button)findViewById(R.id.btnRate);
+        Button btnAbout= (Button) findViewById(R.id.btnAbout);
+        Button btnRate= (Button) findViewById(R.id.btnRate);
 
-        //**************
-        playFa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent(Home.this, GameBoardFa.class));
-            }});
-        //**************
-        playFa4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent(Home.this, GameBoardFa4.class));
-            }});
-        //**************
-        playFa3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent(Home.this, GameBoardFa3.class));
-            }});
-        //**************
-        playSem.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View view) {
-              startActivity(new Intent(Home.this, GameBoardSem.class));
-        }});
-        //**************
-        playSan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Home.this, GameBoardSan.class));
-            }});
-        //**************
-        playMaz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Home.this, GameBoardMaz.class));
-            }});
-        //**************
         btnAbout.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -117,7 +92,7 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(Home.this, About.class));
             }});
 
-        beRate.setOnClickListener(new View.OnClickListener()
+        btnRate.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
@@ -137,7 +112,7 @@ public class Home extends AppCompatActivity {
                         startActivity(intent);
                     }
 
-                else
+                    else
                     {
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
                         alertDialog.setTitle("اینترنت");
@@ -184,6 +159,23 @@ public class Home extends AppCompatActivity {
             }
 
         });
+    }
+
+    public void itemDetails() {
+
+        arrayItem.add(new Item("ico_fa", "SeyedMahdi", "12:14", "سلام. بریم آبگرم فردوس؟"));
+        arrayItem.add(new Item("ico_fa", "Ahmad", "11:41", "فایلا رو دانلود کردی؟"));
+        arrayItem.add(new Item("ico_fa", "Morteza", "11:38", "شرمنده امروز نمیرسم بیام"));
+        arrayItem.add(new Item("ico_fa", "Farhad", "11:32", "اوکی. ممنون"));
+        arrayItem.add(new Item("ico_fa", "SeyedMahdi", "12:14", "سلام. بریم آبگرم فردوس؟"));
+        arrayItem.add(new Item("ico_fa", "Ahmad", "11:41", "فایلا رو دانلود کردی؟"));
+        arrayItem.add(new Item("ico_fa", "Morteza", "11:38", "شرمنده امروز نمیرسم بیام"));
+        arrayItem.add(new Item("ico_fa", "Farhad", "11:32", "اوکی. ممنون"));
+        arrayItem.add(new Item("ico_fa", "SeyedMahdi", "12:14", "سلام. بریم آبگرم فردوس؟"));
+        arrayItem.add(new Item("ico_fa", "Ahmad", "11:41", "فایلا رو دانلود کردی؟"));
+        arrayItem.add(new Item("ico_fa", "Morteza", "11:38", "شرمنده امروز نمیرسم بیام"));
+        arrayItem.add(new Item("ico_fa", "Farhad", "11:32", "اوکی. ممنون"));
+
     }
 
     // end onCreate()

@@ -63,10 +63,10 @@
 
     </string-array>
     <string-array name="WordsFa4">
-    <item>پنکه.پنکه.پنکه</item>
-    <item>کلید.کلید.کلید</item>
-    <item>ساعت.ساعت.ساعت</item>
-</string-array>
+        <item>پنکه.پنکه.پنکه</item>
+        <item>کلید.کلید.کلید</item>
+        <item>ساعت.ساعت.ساعت</item>
+    </string-array>
     <string-array name="WordsFa3">
         <item>دست.دست.دست</item>
         <item>شیر.شیر.شیر</item>
@@ -114,88 +114,88 @@
         <item>اشنیش.اشنیش.عطسه</item>
     </string-array>
 
-  <string-array name="WordsSan">
-      <item>لیوون.livun.لیوان</item>
-      <item>لنگری.lengari.سینی</item>
-      <item>لوبار.lowbār.کناررودخانه</item>
-      <item>ژرژتن.jegādār.بالازدن</item>
-      <item>ژرتکی.žortaki.روبه بالا</item>
-      <item>زوکله.zukele.چابک</item>
-      <item>یرماز.yaramāz.شیک پوش</item>
-      <item>خرقوش.kharghush.خرگوش</item>
-      <item>خاشال.khaashaal.خوشحال</item>
-      <item>خردیم.khordim.روبه آفتاب</item>
-      <item>خورتو.khortow.پرتو آفتاب</item>
-      <item>خونده.khunde.دور</item>
-      <item>خوراک.khuraak.غذا</item>
-      <item>خوسنه.khussene.چاق</item>
-      <item>وادبه.vaadebe.وارفته</item>
-      <item>ولدوم.valdum.کژدم</item>
-      <item>ورتکی.vartaki.افقی</item>
-      <item>ورزری.varzeri.کشاورزی</item>
-      <item>واخپر.vaakhpar.احتیاط</item>
-      <item>واژار.vaazhaar.بازار</item>
-      <item>وجنوه.vejeneve.بیحوصله</item>
-      <item>ولرده.velarde.گسترده</item>
-      <item>ونگوم.vengum.بادمجان</item>
-      <item>وپرتن.veparetan.رنگ پریدن</item>
-      <item>وستتن.vesatetan.سنجیدن</item>
-      <item>ویکار.vikaar.بیکار</item>
-      <item>ویمور.vimor.بیمار</item>
-      <item>اومید.umid.امید</item>
-      <item>تلدار.taldaar.باردار</item>
-      <item>تنورد.tanevard.مجاورت</item>
-      <item>تااوس.taaoos.طاووس</item>
-      <item>تپلکه.taplake.تپل</item>
-      <item>ترسوک.tarsuk.ترسو</item>
-      <item>تشولی.tashevoli.زیرشلواری</item>
-      <item>تخسیر.takhsir.تقصیر</item>
-      <item>تاژگی.taazhegi.تازگی</item>
-      <item>تلکون.telokun.ملخ</item>
-      <item>تنافت.tanaaft.طناب</item>
-      <item>تیرمو.tirmo.ماه هشتم سال</item>
-      <item>تشمیر.toshmir.خمیر ترش</item>
-      <item>تونکه.tunake.شورت</item>
-      <item>سگیرا.sagiraa.چادر سنگسری</item>
-      <item>سالمو.saalemo.سالنامه</item>
-      <item>سامون.saamun.مرز</item>
-      <item>سرنسر.saransar.هم رده</item>
-      <item>سامون.saamun.مرز</item>
-      <item>سرژیر.sarzhir.سر پائین</item>
-      <item>شاخیش.shaakhish.خانواده پادشاهی</item>
-      <item>شکیین.shekein.زن</item>
-      <item>شیوار.shivaar.دره</item>
-      <item>شورگه.shurge.غسال خانه</item>
-  </string-array>
+    <string-array name="WordsSan">
+        <item>لیوون.livun.لیوان</item>
+        <item>لنگری.lengari.سینی</item>
+        <item>لوبار.lowbār.کناررودخانه</item>
+        <item>ژرژتن.jegādār.بالازدن</item>
+        <item>ژرتکی.žortaki.روبه بالا</item>
+        <item>زوکله.zukele.چابک</item>
+        <item>یرماز.yaramāz.شیک پوش</item>
+        <item>خرقوش.kharghush.خرگوش</item>
+        <item>خاشال.khaashaal.خوشحال</item>
+        <item>خردیم.khordim.روبه آفتاب</item>
+        <item>خورتو.khortow.پرتو آفتاب</item>
+        <item>خونده.khunde.دور</item>
+        <item>خوراک.khuraak.غذا</item>
+        <item>خوسنه.khussene.چاق</item>
+        <item>وادبه.vaadebe.وارفته</item>
+        <item>ولدوم.valdum.کژدم</item>
+        <item>ورتکی.vartaki.افقی</item>
+        <item>ورزری.varzeri.کشاورزی</item>
+        <item>واخپر.vaakhpar.احتیاط</item>
+        <item>واژار.vaazhaar.بازار</item>
+        <item>وجنوه.vejeneve.بیحوصله</item>
+        <item>ولرده.velarde.گسترده</item>
+        <item>ونگوم.vengum.بادمجان</item>
+        <item>وپرتن.veparetan.رنگ پریدن</item>
+        <item>وستتن.vesatetan.سنجیدن</item>
+        <item>ویکار.vikaar.بیکار</item>
+        <item>ویمور.vimor.بیمار</item>
+        <item>اومید.umid.امید</item>
+        <item>تلدار.taldaar.باردار</item>
+        <item>تنورد.tanevard.مجاورت</item>
+        <item>تااوس.taaoos.طاووس</item>
+        <item>تپلکه.taplake.تپل</item>
+        <item>ترسوک.tarsuk.ترسو</item>
+        <item>تشولی.tashevoli.زیرشلواری</item>
+        <item>تخسیر.takhsir.تقصیر</item>
+        <item>تاژگی.taazhegi.تازگی</item>
+        <item>تلکون.telokun.ملخ</item>
+        <item>تنافت.tanaaft.طناب</item>
+        <item>تیرمو.tirmo.ماه هشتم سال</item>
+        <item>تشمیر.toshmir.خمیر ترش</item>
+        <item>تونکه.tunake.شورت</item>
+        <item>سگیرا.sagiraa.چادر سنگسری</item>
+        <item>سالمو.saalemo.سالنامه</item>
+        <item>سامون.saamun.مرز</item>
+        <item>سرنسر.saransar.هم رده</item>
+        <item>سامون.saamun.مرز</item>
+        <item>سرژیر.sarzhir.سر پائین</item>
+        <item>شاخیش.shaakhish.خانواده پادشاهی</item>
+        <item>شکیین.shekein.زن</item>
+        <item>شیوار.shivaar.دره</item>
+        <item>شورگه.shurge.غسال خانه</item>
+    </string-array>
     <string-array name="WordsMaz">
-    <item>تندیر.تَندیر.تنور</item>
-    <item>پیلکا.پیلکا.ظرف ماست</item>
-    <item>ساززه.ساززِه.جارو</item>
-    <item>روخنه.روخِنه.رودخانه</item>
-    <item>دوندی.دّوِندی.بقچه</item>
-    <item>چووچل.چووچِل.چوب خشک </item>
-    <item>سامون.سامون.مرز</item>
-    <item>آتشکش.آتَشکَش.خاک انداز</item>
-    <item>بامشی.بامشی.گربه</item>
-    <item>میشکا.میشکا.گنجشک</item>
-    <item>پاپلی.پاپِلی.پروانه</item>
-    <item>مغراز.مِغراز.قیچی</item>
-    <item>چینکا.چینکا.جوجه</item>
-    <item>گوگزا.گوگزا.گوساله</item>
-    <item>قشنیک.قشنیک.کلاغ</item>
-    <item>میرکا.میرکا.دانه تسبیح</item>
-    <item>سمبار.سِمبار.سماور</item>
-    <item>پیلکا.پیلکا.ظرف سفالی</item>
-    <item>انگوس.انگوس.انگشت</item>
-    <item>صواحی.صِواحی.صبح</item>
-    <item>خرناس.خِرناس.خر و پف</item>
-    <item>مرغنه.مِرغِنه.تخم مرغ</item>
-    <item>بیشتی.بیشتی.ته دیگ </item>
-    <item>باکله.باکِلِه.باقالی </item>
-    <item>شونگ.شونگ.فریاد زدن</item>
-    <item>اوخار.اُوخار.آخور</item>
-    <item>پندیک.پِندیک.ویشکون </item>
-     </string-array>
+        <item>تندیر.تَندیر.تنور</item>
+        <item>پیلکا.پیلکا.ظرف ماست</item>
+        <item>ساززه.ساززِه.جارو</item>
+        <item>روخنه.روخِنه.رودخانه</item>
+        <item>دوندی.دّوِندی.بقچه</item>
+        <item>چووچل.چووچِل.چوب خشک </item>
+        <item>سامون.سامون.مرز</item>
+        <item>آتشکش.آتَشکَش.خاک انداز</item>
+        <item>بامشی.بامشی.گربه</item>
+        <item>میشکا.میشکا.گنجشک</item>
+        <item>پاپلی.پاپِلی.پروانه</item>
+        <item>مغراز.مِغراز.قیچی</item>
+        <item>چینکا.چینکا.جوجه</item>
+        <item>گوگزا.گوگزا.گوساله</item>
+        <item>قشنیک.قشنیک.کلاغ</item>
+        <item>میرکا.میرکا.دانه تسبیح</item>
+        <item>سمبار.سِمبار.سماور</item>
+        <item>پیلکا.پیلکا.ظرف سفالی</item>
+        <item>انگوس.انگوس.انگشت</item>
+        <item>صواحی.صِواحی.صبح</item>
+        <item>خرناس.خِرناس.خر و پف</item>
+        <item>مرغنه.مِرغِنه.تخم مرغ</item>
+        <item>بیشتی.بیشتی.ته دیگ </item>
+        <item>باکله.باکِلِه.باقالی </item>
+        <item>شونگ.شونگ.فریاد زدن</item>
+        <item>اوخار.اُوخار.آخور</item>
+        <item>پندیک.پِندیک.ویشکون </item>
+    </string-array>
 
     <string name="bestHome">بهترین رکورد</string>
 
@@ -217,7 +217,6 @@
         <item>@drawable/circle_corner_purple</item>
         <item>@drawable/circle_corner_white</item>
     </string-array>
-
 
 
 </resources>

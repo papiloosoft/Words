@@ -1,55 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="ir.papiloo.words">
-
+    package="ir.papiloo.words">
     <!-- Permissions -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name="ir.papiloo.words.Configs"
+        android:name=".Configs"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-
         <!-- Splash screen -->
         <activity
-            android:name="ir.papiloo.words.SplashScreen"
+            android:name=".SplashScreen"
             android:label="@string/app_name"
             android:noHistory="true"
             android:screenOrientation="fullSensor"
             android:theme="@style/Splashscreen">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-
-        <!-- Other Activities -->
-        <activity android:name="ir.papiloo.words.Home">
-        </activity>
-        <activity android:name="ir.papiloo.words.GameBoardFa">
-        </activity>
-        <activity android:name="ir.papiloo.words.GameBoardSem">
-        </activity>
-        <activity android:name="ir.papiloo.words.GameBoardSan">
-        </activity>
-        <activity android:name="ir.papiloo.words.GameBoardMaz">
-        </activity>
-        <activity android:name="ir.papiloo.words.GameOver">
-        </activity>
-        <activity android:name="ir.papiloo.words.About">
-        </activity>
-        <activity android:name="ir.papiloo.words.GameBoardFa4">
-        </activity>
-        <activity android:name="ir.papiloo.words.GameBoardFa3">
-        </activity>
+        </activity> <!-- Other Activities -->
+        <activity android:name=".Home"></activity>
+        <activity android:name=".GameBoardFa"></activity>
+        <activity android:name=".GameBoardSem"></activity>
+        <activity android:name=".GameBoardSan"></activity>
+        <activity android:name=".GameBoardMaz"></activity>
+        <activity android:name=".GameOver"></activity>
+        <activity android:name=".About"></activity>
+        <activity android:name=".GameBoardFa4"></activity>
+        <activity android:name=".GameBoardFa3"></activity>
+        <activity android:name=".CustomAdapter"></activity>
+        <activity android:name=".Item"></activity>
 
     </application>
 
