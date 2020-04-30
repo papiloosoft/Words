@@ -163,18 +163,10 @@ public class Home extends AppCompatActivity {
 
     public void itemDetails() {
 
-        arrayItem.add(new Item("ico_fa", "SeyedMahdi", "12:14", "سلام. بریم آبگرم فردوس؟"));
-        arrayItem.add(new Item("ico_fa", "Ahmad", "11:41", "فایلا رو دانلود کردی؟"));
-        arrayItem.add(new Item("ico_fa", "Morteza", "11:38", "شرمنده امروز نمیرسم بیام"));
-        arrayItem.add(new Item("ico_fa", "Farhad", "11:32", "اوکی. ممنون"));
-        arrayItem.add(new Item("ico_fa", "SeyedMahdi", "12:14", "سلام. بریم آبگرم فردوس؟"));
-        arrayItem.add(new Item("ico_fa", "Ahmad", "11:41", "فایلا رو دانلود کردی؟"));
-        arrayItem.add(new Item("ico_fa", "Morteza", "11:38", "شرمنده امروز نمیرسم بیام"));
-        arrayItem.add(new Item("ico_fa", "Farhad", "11:32", "اوکی. ممنون"));
-        arrayItem.add(new Item("ico_fa", "SeyedMahdi", "12:14", "سلام. بریم آبگرم فردوس؟"));
-        arrayItem.add(new Item("ico_fa", "Ahmad", "11:41", "فایلا رو دانلود کردی؟"));
-        arrayItem.add(new Item("ico_fa", "Morteza", "11:38", "شرمنده امروز نمیرسم بیام"));
-        arrayItem.add(new Item("ico_fa", "Farhad", "11:32", "اوکی. ممنون"));
+        arrayItem.add(new Item("ico_fa", "فارسی", "----", "----"));
+        arrayItem.add(new Item("ico_sem", "سمنانی", "----", "----"));
+        arrayItem.add(new Item("ico_san", "سنگسری", "----", "----"));
+        arrayItem.add(new Item("ico_maz", "مازندرانی", "----", "----"));
 
     }
 
