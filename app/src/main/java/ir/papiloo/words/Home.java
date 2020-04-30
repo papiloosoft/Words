@@ -78,6 +78,15 @@ public class Home extends AppCompatActivity {
                 if(i==0) {
                     startActivity(new Intent(Home.this, GameBoardFa.class));
                 }
+                if(i==1) {
+                    startActivity(new Intent(Home.this, GameBoardSem.class));
+                }
+                if(i==2) {
+                    startActivity(new Intent(Home.this, GameBoardSan.class));
+                }
+                if(i==3) {
+                    startActivity(new Intent(Home.this, GameBoardMaz.class));
+                }
 
             }
         });
