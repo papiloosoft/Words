@@ -172,10 +172,14 @@ public class Home extends AppCompatActivity {
 
     public void itemDetails() {
 
-        arrayItem.add(new Item("ico_fa", "فارسی", "----", "----"));
-        arrayItem.add(new Item("ico_sem", "سمنانی", "----", "----"));
-        arrayItem.add(new Item("ico_san", "سنگسری", "----", "----"));
-        arrayItem.add(new Item("ico_maz", "مازندرانی", "----", "----"));
+//        arrayItem.add(new Item("ico_fa", "فارسی", "----", "----"));
+//        arrayItem.add(new Item("ico_sem", "سمنانی", "----", "----"));
+//        arrayItem.add(new Item("ico_san", "سنگسری", "----", "----"));
+//        arrayItem.add(new Item("ico_maz", "مازندرانی", "----", "----"));
+        arrayItem.add(new Item("ico_fa", "50"));
+        arrayItem.add(new Item("ico_sem" , "600"));
+        arrayItem.add(new Item("ico_san", "10000"));
+        arrayItem.add(new Item("ico_maz", "50000"));
 
     }
 

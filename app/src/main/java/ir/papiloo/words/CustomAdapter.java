@@ -51,8 +51,8 @@ public class CustomAdapter extends BaseAdapter {
 
         Item currentItem = (Item) getItem(i);
 
-        vHolder.txtItemName.setText(currentItem.getTxtName());
-        vHolder.txtItemTime.setText(currentItem.getTxtDate());
+        //vHolder.txtItemName.setText(currentItem.getTxtName());
+        //vHolder.txtItemTime.setText(currentItem.getTxtDate());
         vHolder.txtItemMessage.setText(currentItem.getTxtMessage());
 
         String mUri = "@drawable/" + currentItem.getImgAvatar();
@@ -69,9 +69,9 @@ public class CustomAdapter extends BaseAdapter {
 
         public ViewHolder(View mview){
             imgItemAvatar=mview.findViewById(R.id.ico);
-            txtItemName=mview.findViewById(R.id.txt_name);
+            //txtItemName=mview.findViewById(R.id.txt_name);
             txtItemMessage=mview.findViewById(R.id.txt_message);
-            txtItemTime=mview.findViewById(R.id.txt_time);
+            //txtItemTime=mview.findViewById(R.id.txt_time);
         }
     }
 }

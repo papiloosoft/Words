@@ -44,5 +44,9 @@ public class Item {
         this.txtDate = txtDate;
         this.txtMessage = txtMessage;
     }
+    public Item(String imgAvatar, String txtMessage) {
+        this.imgAvatar = imgAvatar;
+        this.txtMessage = txtMessage;
+    }
 }
 
