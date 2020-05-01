@@ -8,7 +8,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#9D88C1"
-    tools:context=".Home">
+    tools:context=".Home"
+    >
 
     <ImageView
         android:id="@+id/imageView"
@@ -49,6 +50,49 @@
         android:layout_marginTop="20dp"
         android:textColor="#673AB7"
         android:textSize="32sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/list_view"
+        android:layout_marginBottom="-50dp"
+        android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/char3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:checked="true"
+                android:text="3 حرفی"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp" />
+
+            <RadioButton
+                android:id="@+id/char4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:checked="false"
+                android:text="4 حرفی"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp" />
+        <RadioButton
+            android:id="@+id/char5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:text="5 حرفی"
+
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            />
+
+
+
+    </RadioGroup>
 
     <ListView
         android:id="@+id/list_view"

@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 
@@ -33,6 +34,7 @@ public class Home extends AppCompatActivity {
     TextView bestTxt;
     ListView mList;
     ArrayList<Item> arrayItem;
+    RadioButton radChar3,radChar4,radChar5;
 
     /* Variables */
     SharedPreferences prefs;
@@ -52,7 +54,10 @@ public class Home extends AppCompatActivity {
         // Init views
         bestTxt = (TextView)findViewById(R.id.hBestTxt);
         bestTxt.setTypeface(Configs.juneGull);
-
+        //RadioButtom
+        radChar3 =(RadioButton) findViewById(R.id.char3);
+        radChar4 = (RadioButton) findViewById(R.id.char4);
+        radChar5 = findViewById(R.id.char5);
         // Get Best Score
         prefs = PreferenceManager.getDefaultSharedPreferences(Home.this);
         Configs.bestScore = prefs.getInt("bestScore", Configs.bestScore);
@@ -74,16 +79,35 @@ public class Home extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //Toast.makeText(MainActivity.this, "Item Number " + i , Toast.LENGTH_SHORT).show();
                 if(i==0) {
-                    startActivity(new Intent(Home.this, GameBoardFa.class));
+                    if(radChar5.isChecked())
+                    {
+                        startActivity(new Intent(Home.this, GameBoardFa.class));
+                    }
+                    if(radChar4.isChecked())
+                    {
+                        startActivity(new Intent(Home.this, GameBoardFa4.class));
+                    }
+                    if(radChar3.isChecked())
+                    {
+                        startActivity(new Intent(Home.this,GameBoardFa3.class));
+                    }
                 }
                 if(i==1) {
-                    startActivity(new Intent(Home.this, GameBoardSem.class));
+                    if(radChar5.isChecked())
+                    {
+                        startActivity(new Intent(Home.this, GameBoardSem.class));
+                    }
                 }
                 if(i==2) {
-                    startActivity(new Intent(Home.this, GameBoardSan.class));
+                    if (radChar5.isChecked())
+                    {
+                        startActivity(new Intent(Home.this, GameBoardSan.class));
+                    }
                 }
                 if(i==3) {
-                    startActivity(new Intent(Home.this, GameBoardMaz.class));
+                    if (radChar5.isChecked()) {
+                        startActivity(new Intent(Home.this, GameBoardMaz.class));
+                    }
                 }
 
             }
