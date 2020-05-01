@@ -68,7 +68,7 @@ public class CustomAdapter extends BaseAdapter {
         TextView txtItemMessage;
 
         public ViewHolder(View mview){
-            imgItemAvatar=mview.findViewById(R.id.ico);
+            imgItemAvatar=mview.findViewById(R.id.icon);
             //txtItemName=mview.findViewById(R.id.txt_name);
             txtItemMessage=mview.findViewById(R.id.txt_message);
             //txtItemTime=mview.findViewById(R.id.txt_time);

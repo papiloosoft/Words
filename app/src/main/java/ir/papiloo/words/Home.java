@@ -170,6 +170,7 @@ public class Home extends AppCompatActivity {
         });
     }
 
+    // create other language in list
     public void itemDetails() {
 
 //        arrayItem.add(new Item("ico_fa", "فارسی", "----", "----"));

@@ -8,8 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#9D88C1"
-    tools:context=".Home"
-    android:layoutDirection="rtl">
+    tools:context=".Home">
 
     <ImageView
         android:id="@+id/imageView"
@@ -22,14 +21,16 @@
         />
 
 
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="87dp"
         android:text="@string/bestHome"
         android:textAllCaps="true"
         android:textColor="#673AB7"
@@ -40,21 +41,27 @@
         android:id="@+id/hBestTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="213dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
         android:text="00"
         android:textColor="#673AB7"
         android:textSize="32sp" />
+
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_below="@+id/hBestTxt"
-        android:layout_marginTop="10dp"
-        android:divider="#36b3c4"
+        android:layout_marginTop="70dp"
+
         android:dividerHeight="3dp"
-         />
+        />
+<!--        android:divider="#36b3c4"-->
+
 
 
     <Button
@@ -91,7 +98,11 @@
         android:layout_width="110dp"
         android:layout_height="54dp"
         android:layout_below="@+id/list_view"
-        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/ico_idea"
         android:textSize="18sp" />
 
@@ -100,15 +111,13 @@
         android:layout_width="110dp"
         android:layout_height="54dp"
         android:layout_below="@+id/list_view"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="301dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/ico_about"
         android:textSize="18sp" />
-
-
 
 
 </RelativeLayout>
