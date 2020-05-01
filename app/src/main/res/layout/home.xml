@@ -55,41 +55,46 @@
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_above="@+id/list_view"
-        android:layout_marginBottom="-50dp"
-        android:orientation="horizontal">
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        >
 
-            <RadioButton
-                android:id="@+id/char3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:checked="true"
-                android:text="3 حرفی"
-                android:textSize="20dp"
-                android:layout_marginLeft="5dp" />
+        <RadioButton
+            android:id="@+id/char3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:text="3 حرفی"
+            android:textSize="20dp"
+            android:textColor="#FFEB3B"
+            />
 
-            <RadioButton
-                android:id="@+id/char4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:checked="false"
-                android:text="4 حرفی"
-                android:textSize="20dp"
-                android:layout_marginLeft="20dp" />
+        <RadioButton
+            android:id="@+id/char4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:text="4 حرفی"
+            android:textSize="20dp"
+            android:textColor="#FFEB3B"
+            />
+
         <RadioButton
             android:id="@+id/char5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:checked="false"
-            android:text="5 حرفی"
-
-            android:textSize="20dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="true"
+            android:text="5 حرفی"
+            android:textSize="20dp"
+            android:textColor="#FFEB3B"
             />
-
 
 
     </RadioGroup>
@@ -100,40 +105,12 @@
         android:layout_height="200dp"
         android:layout_below="@+id/hBestTxt"
         android:layout_marginTop="70dp"
+        android:dividerHeight="4dp"
 
-        android:dividerHeight="3dp"
         />
-<!--        android:divider="#36b3c4"-->
 
 
 
-    <Button
-        android:id="@+id/btnFa4"
-        android:layout_width="95dp"
-        android:layout_height="60dp"
-        android:layout_below="@+id/btnRate"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/circle_corner_green"
-        android:text="فارسی 4"
-
-        android:textColor="#FFE33030"
-        android:textSize="25sp" />
-
-    <Button
-        android:id="@+id/btnFa3"
-        android:layout_width="95dp"
-        android:layout_height="60dp"
-        android:layout_below="@+id/btnRate"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@+id/btnFa4"
-        android:background="@drawable/circle_corner_green"
-        android:text="فارسی 3"
-        android:textColor="#FFE33030"
-        android:textSize="25sp" />
-    <!--        android:background="@drawable/play_butt"
-        android:background="#FFEB3B" -->
 
 
     <Button
@@ -161,6 +138,16 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/ico_about"
         android:textSize="18sp" />
-
-
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation"
+        android:background="?android:attr/windowBackground"/>
 </RelativeLayout>

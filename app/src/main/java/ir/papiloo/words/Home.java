@@ -199,12 +199,20 @@ public class Home extends AppCompatActivity {
 //        arrayItem.add(new Item("ico_sem", "سمنانی", "----", "----"));
 //        arrayItem.add(new Item("ico_san", "سنگسری", "----", "----"));
 //        arrayItem.add(new Item("ico_maz", "مازندرانی", "----", "----"));
-        arrayItem.add(new Item("ico_fa", "50"));
-        arrayItem.add(new Item("ico_sem" , "600"));
-        arrayItem.add(new Item("ico_san", "10000"));
-        arrayItem.add(new Item("ico_maz", "50000"));
+        String [] wordsArrFa = getResources().getStringArray(R.array.WordsFa);
+        arrayItem.add(new Item("ico_fa", Integer.toString(wordsArrFa.length)));
+
+        String [] wordsArrSem = getResources().getStringArray(R.array.WordsSem);
+        arrayItem.add(new Item("ico_sem" ,Integer.toString(wordsArrSem.length)));
+
+        String [] wordsArrSan = getResources().getStringArray(R.array.WordsSan);
+        arrayItem.add(new Item("ico_san",Integer.toString(wordsArrSan.length)));
+
+        String [] wordsArrMaz = getResources().getStringArray(R.array.WordsMaz);
+        arrayItem.add(new Item("ico_maz", Integer.toString(wordsArrMaz.length)));
 
     }
+
 
     // end onCreate()
   @Override
