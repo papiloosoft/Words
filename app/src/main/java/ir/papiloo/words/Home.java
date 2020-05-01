@@ -53,8 +53,6 @@ public class Home extends AppCompatActivity {
         bestTxt = (TextView)findViewById(R.id.hBestTxt);
         bestTxt.setTypeface(Configs.juneGull);
 
-
-
         // Get Best Score
         prefs = PreferenceManager.getDefaultSharedPreferences(Home.this);
         Configs.bestScore = prefs.getInt("bestScore", Configs.bestScore);

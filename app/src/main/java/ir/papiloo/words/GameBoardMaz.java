@@ -515,13 +515,9 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
         Configs.bestScore = prefs.getInt("bestScore", Configs.bestScore);
 
         // Save Best Score
-        if (!mmp.checkPermissionForReadExternalStorage()) {
-            mmp.checkPermissionForReadExternalStorage();
-        } else {
-            if (Configs.bestScore <= Configs.score) {
-                Configs.bestScore = Configs.score;
-                prefs.edit().putInt("bestScore", Configs.bestScore).apply();
-            }
+        if (Configs.bestScore <= Configs.score) {
+            Configs.bestScore = Configs.score;
+            prefs.edit().putInt("bestScore", Configs.bestScore).apply();
         }
 
         // Play a sound
@@ -530,7 +526,6 @@ public class GameBoardMaz extends AppCompatActivity implements View.OnClickListe
         // Go to Game Over Activity
         startActivity(new Intent(GameBoardMaz.this, GameOver.class));
     }
-
 
 
 
