@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <color android:name="colorPrimary">#6200EE</color>
+    <color android:name="colorPrimaryDark">#3700B3</color>
+    <color android:name="colorAccent">#03DAC5</color>
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:state_checked="true"
+            android:color="#03A9F4" />
+        <item android:state_checked="false"
+            android:color="#6fc97d"/>
+    </selector>
+</selector>

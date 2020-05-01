@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/about"
+        android:id="@+id/nav_about"
         android:icon="@drawable/ic_call_black_24dp"
         android:title="درباره ما" />
     <item
-        android:id="@+id/home"
+        android:id="@+id/nav_home"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="خانه" />
     <item
-        android:id="@+id/idea"
+        android:id="@+id/nav_idea"
         android:icon="@drawable/ic_star_black_24dp"
         android:title="نظر دادن" />
 </menu>

@@ -7,8 +7,9 @@
     android:id="@+id/hLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9D88C1"
+    android:background="@drawable/main"
     tools:context=".Home"
+
     >
 
     <ImageView
@@ -17,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="40dp"
         app:srcCompat="@drawable/logo_home"
         />
 
@@ -34,7 +35,7 @@
         android:layout_marginRight="87dp"
         android:text="@string/bestHome"
         android:textAllCaps="true"
-        android:textColor="#673AB7"
+        android:textColor="#FFEB3B"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -47,18 +48,17 @@
         android:layout_alignLeft="@+id/imageView"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:textColor="#673AB7"
+        android:layout_marginTop="17dp"
+        android:textColor="#FFEB3B"
         android:textSize="32sp" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal"
-        >
+        android:layout_above="@+id/list_view"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/char3"
@@ -68,9 +68,8 @@
             android:layout_marginTop="10dp"
             android:checked="false"
             android:text="3 حرفی"
-            android:textSize="20dp"
             android:textColor="#FFEB3B"
-            />
+            android:textSize="20dp" />
 
         <RadioButton
             android:id="@+id/char4"
@@ -80,9 +79,8 @@
             android:layout_marginTop="10dp"
             android:checked="false"
             android:text="4 حرفی"
-            android:textSize="20dp"
             android:textColor="#FFEB3B"
-            />
+            android:textSize="20dp" />
 
         <RadioButton
             android:id="@+id/char5"
@@ -92,9 +90,8 @@
             android:layout_marginTop="10dp"
             android:checked="true"
             android:text="5 حرفی"
-            android:textSize="20dp"
             android:textColor="#FFEB3B"
-            />
+            android:textSize="20dp" />
 
 
     </RadioGroup>
@@ -102,42 +99,9 @@
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@+id/hBestTxt"
-        android:layout_marginTop="70dp"
-        android:dividerHeight="4dp"
-
-        />
-
-
-
-
-
-    <Button
-        android:id="@+id/btnRate"
-        android:layout_width="110dp"
-        android:layout_height="54dp"
-        android:layout_below="@+id/list_view"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/ico_idea"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/btnAbout"
-        android:layout_width="110dp"
-        android:layout_height="54dp"
-        android:layout_below="@+id/list_view"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/ico_about"
-        android:textSize="18sp" />
+        android:layout_height="180dp"
+        android:layout_alignBottom="@+id/fragment_container"
+        android:layout_marginBottom="10dp" />
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
@@ -146,8 +110,9 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_navigation"
-        android:background="?android:attr/windowBackground"/>
+        android:background="?android:attr/windowBackground" />
+
 </RelativeLayout>

@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -20,7 +21,10 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -35,6 +39,7 @@ public class Home extends AppCompatActivity {
     ListView mList;
     ArrayList<Item> arrayItem;
     RadioButton radChar3,radChar4,radChar5;
+    BottomNavigationView bottomNav;
 
     /* Variables */
     SharedPreferences prefs;
@@ -58,6 +63,28 @@ public class Home extends AppCompatActivity {
         radChar3 =(RadioButton) findViewById(R.id.char3);
         radChar4 = (RadioButton) findViewById(R.id.char4);
         radChar5 = findViewById(R.id.char5);
+        //BottonNavigation
+        bottomNav=findViewById(R.id.bottom_navigation);
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem Item) {
+                if(Item.getItemId()==R.id.nav_home)
+                {
+                }
+                if(Item.getItemId()==R.id.nav_about)
+                {
+                    startActivity(new Intent(Home.this, About.class));
+                }
+                if (Item.getItemId()==R.id.nav_idea)
+                {
+                    startActivity(new Intent(Home.this, Idea.class));
+
+                }
+                return false;
+            }
+        });
+
+
         // Get Best Score
         prefs = PreferenceManager.getDefaultSharedPreferences(Home.this);
         Configs.bestScore = prefs.getInt("bestScore", Configs.bestScore);
@@ -112,84 +139,7 @@ public class Home extends AppCompatActivity {
 
             }
         });
-        // MARK: - PLAY BUTTON ------------------------------------
-        Button btnAbout= (Button) findViewById(R.id.btnAbout);
-        Button btnRate= (Button) findViewById(R.id.btnRate);
 
-        btnAbout.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Home.this, About.class));
-            }});
-
-        btnRate.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                try
-                {
-                    if (mmp.IS_INTERNET_AVAILABLE(Home.this))
-                    {
-                        // Do your stuff
-                        // your codes
-                        final String PACKAGE_NAME = getPackageName();
-                        //String url="https://www.papiloo.ir/documentation/Games/Fives/Papiloo.apk";
-                        String url = "myket://comment?id=" + getPackageName();
-                        Intent intent = new Intent();
-                        intent.setAction(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(url));
-                        startActivity(intent);
-                    }
-
-                    else
-                    {
-                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                        alertDialog.setTitle("اینترنت");
-                        alertDialog.setMessage("اینترنت وصل نیست");
-                        alertDialog.setIcon(R.drawable.logo);
-                        alertDialog.setPositiveButton("خروج از بازی",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        finish();
-                                    }
-                                });
-//                             alertDialog.setNegativeButton("درباره ما",
-//                            new DialogInterface.OnClickListener()
-//                            {
-//                                public void onClick(DialogInterface dialog, int which) {
-//                                    startActivity(new Intent(Home.this, About.class));
-//                                }
-//                            });
-                        alertDialog.show();
-                    }
-                }
-                catch (Exception e)
-                {
-                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
-                    alertDialog.setTitle("نظر");
-                    alertDialog.setMessage("بزودی فعال میشود");
-                    alertDialog.setIcon(R.drawable.logo);
-                    alertDialog.setPositiveButton("خروج از بازی",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    finish();
-                                }
-                            });
-//                             alertDialog.setNegativeButton("درباره ما",
-//                            new DialogInterface.OnClickListener()
-//                            {
-//                                public void onClick(DialogInterface dialog, int which) {
-//                                    startActivity(new Intent(Home.this, About.class));
-//                                }
-//                            });
-                    alertDialog.show();
-                }
-
-            }
-
-        });
     }
 
     // create other language in list
