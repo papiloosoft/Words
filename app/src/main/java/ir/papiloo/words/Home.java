@@ -70,14 +70,17 @@ public class Home extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem Item) {
                 if(Item.getItemId()==R.id.nav_home)
                 {
+                    return true;
                 }
                 if(Item.getItemId()==R.id.nav_about)
                 {
                     startActivity(new Intent(Home.this, About.class));
+                    return true;
                 }
                 if (Item.getItemId()==R.id.nav_idea)
                 {
                     startActivity(new Intent(Home.this, Idea.class));
+                    return true;
 
                 }
                 return false;

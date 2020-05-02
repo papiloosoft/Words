@@ -49,15 +49,17 @@ public class About extends AppCompatActivity {
                 if(Item.getItemId()==R.id.nav_home)
                 {
                     finish();
+                    return true;
                 }
                 if(Item.getItemId()==R.id.nav_about)
                 {
-
+                    return true;
                 }
                 if (Item.getItemId()==R.id.nav_idea)
                 {
                     startActivity(new Intent(About.this, Idea.class));
                     finish();
+                    return true;
                 }
                 return false;
             }
