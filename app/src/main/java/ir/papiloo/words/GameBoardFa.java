@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -36,7 +37,7 @@ public class GameBoardFa extends AppCompatActivity implements View.OnClickListen
     TextView sTitleTxt, scoreTxt, letter1, letter2, letter3, letter4, letter5,txtTest;
     ProgressBar pb;
     Button letterButt1, letterButt2, letterButt3, letterButt4, letterButt5;
-
+    ImageView backImage;
 
 
     /* Variables */
@@ -110,7 +111,8 @@ public class GameBoardFa extends AppCompatActivity implements View.OnClickListen
         // mp = new MediaPlayer();
 
         //Wallpaper
-
+        backImage= findViewById(R.id.backImage);
+        backImage.setImageResource(R.drawable.shab);
         // Get a List array of words
 
         String [] wordsArr = getResources().getStringArray(R.array.WordsFa);

@@ -5,11 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/zohr"
     tools:context=".GameBoardFa"
     android:layoutDirection="rtl">
 
-
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/shab"/>
     <Button
         android:id="@+id/gbBackButt"
         android:layout_width="44dp"
@@ -27,7 +30,7 @@
         android:layout_alignBaseline="@+id/gbBackButt"
         android:layout_centerHorizontal="true"
         android:text="@string/score"
-        android:textColor="#555"
+        android:textColor="#0B0A0A"
         android:textSize="18sp" />
 
     <TextView
@@ -38,7 +41,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center_vertical"
         android:text="00"
-        android:textColor="#333"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -167,6 +170,7 @@
         android:progressBackgroundTint="#4CAF50"
         android:progressTint="#C81B2F"/>
 
+
     <RelativeLayout
         android:id="@+id/gbButtonsLayout"
         android:layout_width="match_parent"
@@ -250,18 +254,7 @@
             android:gravity="center_horizontal" />
 
 
-        <Button
-            android:id="@+id/btnHint"
-            android:layout_width="117dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="300dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/ico_help"
-            android:onClick="btnHintClick"
-            android:textAllCaps="false"
-            android:textColor="@android:color/background_dark"
 
-            />
 
         <TextView
             android:id="@+id/goPossibleWordTxt"
@@ -270,22 +263,46 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="250dp"
 
-            android:textColor="#fff"
+            android:textColor="#003159"
             android:textSize="30sp"
              />
         <!-- android:textStyle="bold" -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:layout_marginBottom="00dp"
+            android:columnCount="2"
+            android:rowCount="1">
 
-        <TextView
-            android:id="@+id/txtHint"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="307dp"
-            android:layout_toEndOf="@+id/btnHint"
-            android:layout_marginStart="20dp"
-            android:textColor="#FFEB3B"
-            android:textSize="30sp"
-            android:layout_toRightOf="@+id/btnHint"
-            android:layout_marginLeft="20dp" />
+            <Button
+                android:layout_row="0"
+                android:layout_column="0"
+                android:id="@+id/btnHint"
+                android:layout_width="117dp"
+                android:layout_height="50dp"
+
+                android:background="@drawable/ico_help"
+                android:onClick="btnHintClick"
+                android:textAllCaps="false"
+                android:textColor="@android:color/background_dark"
+
+                />
+
+            <TextView
+                android:layout_row="0"
+                android:layout_column="1"
+                android:id="@+id/txtHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:textColor="#FFE500"
+                android:textSize="30sp" />
+        </GridLayout>
+
 
     </RelativeLayout>
 
