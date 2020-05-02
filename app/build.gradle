@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 android {
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\Papiloo\\Desktop\\Android-key\\Papiloo\\PAPILOOKEY.jks')
+            storePassword 'papiloo@8198'
+            keyAlias = 'papiloosoft'
+            keyPassword 'papiloo@8198'
+        }
+    }
     compileSdkVersion 28
     buildToolsVersion '29.0.3'
     defaultConfig {
@@ -19,6 +27,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
 

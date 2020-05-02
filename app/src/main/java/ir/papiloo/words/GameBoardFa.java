@@ -109,6 +109,7 @@ public class GameBoardFa extends AppCompatActivity implements View.OnClickListen
 
         // mp = new MediaPlayer();
 
+        //Wallpaper
 
         // Get a List array of words
 

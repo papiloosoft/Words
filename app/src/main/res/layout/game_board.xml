@@ -5,11 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9D88C1"
+    android:background="@drawable/zohr"
     tools:context=".GameBoardFa"
     android:layoutDirection="rtl">
-
-
 
 
     <Button
@@ -160,15 +158,14 @@
         android:id="@+id/gbProgressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_alignRight="@+id/linearLayout"
         android:layout_alignLeft="@+id/linearLayout"
-
         android:layout_below="@+id/linearLayout"
         android:layout_marginTop="10dp"
         android:progress="10"
-        android:progressBackgroundTint="@color/colorAccent"
-        android:progressTint="@color/colorAccent"/>
+        android:progressBackgroundTint="#4CAF50"
+        android:progressTint="#C81B2F"/>
 
     <RelativeLayout
         android:id="@+id/gbButtonsLayout"
