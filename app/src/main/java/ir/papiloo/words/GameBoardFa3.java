@@ -363,7 +363,6 @@ public class GameBoardFa3 extends AppCompatActivity implements View.OnClickListe
                         // TIME ENDED, GAME OVER!
                         if (progress >= 100) {
                             gameTimer.cancel();
-                            finish();
                             gameOver();
                         }
             }});}

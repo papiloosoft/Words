@@ -374,7 +374,6 @@ public class GameBoardFa extends AppCompatActivity implements View.OnClickListen
                         // TIME ENDED, GAME OVER!
                         if (progress >= 100) {
                             gameTimer.cancel();
-                            finish();
                             gameOver();
                         }
             }});}

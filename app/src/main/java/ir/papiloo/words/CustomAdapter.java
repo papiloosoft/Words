@@ -16,6 +16,9 @@ import java.util.ArrayList;
 public class CustomAdapter extends BaseAdapter {
     private Context mContext;
 
+    public CustomAdapter() {
+    }
+
     public CustomAdapter(Context mContext, ArrayList<Item> mItem) {
         this.mContext = mContext;
         this.mItem = mItem;
@@ -67,7 +70,7 @@ public class CustomAdapter extends BaseAdapter {
         TextView txtItemTime;
         TextView txtItemMessage;
 
-        public ViewHolder(View mview){
+        ViewHolder(View mview){
             imgItemAvatar=mview.findViewById(R.id.icon);
             //txtItemName=mview.findViewById(R.id.txt_name);
             txtItemMessage=mview.findViewById(R.id.txt_message);

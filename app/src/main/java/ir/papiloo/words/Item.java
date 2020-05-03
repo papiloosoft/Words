@@ -6,6 +6,9 @@ public class Item {
     private String txtDate;
     private String txtMessage;
 
+    public Item() {
+    }
+
     public String getImgAvatar() {
         return imgAvatar;
     }
