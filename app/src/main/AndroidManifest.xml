@@ -41,7 +41,6 @@
         <activity android:name=".GameBoardFa3" />
         <activity android:name=".CustomAdapter" />
         <activity android:name=".Item" />
-        <activity android:name=".SendWord" />
     </application>
 
 </manifest>
