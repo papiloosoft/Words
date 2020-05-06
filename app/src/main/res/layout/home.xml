@@ -52,6 +52,14 @@
         android:textColor="#FFEB3B"
         android:textSize="32sp" />
 
+    <Button
+        android:id="@+id/testSite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="50dp"
+        android:text="test site"/>
+
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"

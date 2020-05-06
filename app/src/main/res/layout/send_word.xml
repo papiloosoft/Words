@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#8BC34A"
+    android:orientation="vertical"
+    android:padding="20dp"
 >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp">
 
+        <Spinner
+            android:id="@+id/selectWord"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
 
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txtWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="لغت خود را بنویسید"
+            android:textColorHint="@color/colorAccent"
 
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/txtMeansWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="معنی لغت را اگر میدانید بنویسید"
+        android:textColorHint="@color/colorAccent"
 
+        />
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""
+        android:text="فرستادن"
+        />
+    </LinearLayout>
 
-</RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

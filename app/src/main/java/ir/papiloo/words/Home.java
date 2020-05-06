@@ -55,7 +55,15 @@ public class Home extends AppCompatActivity {
         // Hide Status bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        //test send to site
+        Button btntest=(Button) findViewById(R.id.testSite);
+        btntest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, SendWord.class));
 
+            }
+        });
         // Init views
         bestTxt = (TextView)findViewById(R.id.hBestTxt);
         bestTxt.setTypeface(Configs.juneGull);
@@ -204,7 +212,7 @@ public class Home extends AppCompatActivity {
                     {
                         try
                         {
-                            if (mmp.IS_INTERNET_AVAILABLE(Home.this)) {
+                            if (MarshMallowPermission.IS_INTERNET_AVAILABLE(Home.this)) {
                                 // Do your stuff
                                 // your codes
                                 final String PACKAGE_NAME = getPackageName();
