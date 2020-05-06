@@ -64,7 +64,7 @@ public class MyHttpUtils
         String uri = requestData.getUri();
         if("GET".equals(requestData.getMethod()) && requestData.getEncodedParams().isEmpty())
         {
-            uri = uri + "?" + requestData.getEncodedParams();
+            uri = uri + requestData.getEncodedParams();
 
         }
         try
@@ -140,7 +140,6 @@ public class MyHttpUtils
 
         public String getEncodedParams()
         {
-            String test="";
             StringBuilder sb= new StringBuilder();
             try
             {

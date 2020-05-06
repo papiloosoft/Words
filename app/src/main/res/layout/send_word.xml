@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#8BC34A"
+    android:background="#535551"
     android:orientation="vertical"
     android:padding="20dp"
 >
@@ -17,9 +17,12 @@
         android:layout_marginBottom="30dp">
 
         <Spinner
-            android:id="@+id/selectWord"
+            android:id="@+id/selectCategory"
             android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/txtWord"
@@ -27,23 +30,64 @@
             android:layout_height="wrap_content"
             android:hint="لغت خود را بنویسید"
             android:textColorHint="@color/colorAccent"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
 
-        />
+
+
+            />
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/txtMeansWord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="معنی لغت را اگر میدانید بنویسید"
         android:textColorHint="@color/colorAccent"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+
+
 
         />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/pronounce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="تلفظ خود را بنویسید"
+            android:textColorHint="@color/colorAccent"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+
+
+            />
     <Button
         android:id="@+id/btnSend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity=""
-        android:text="فرستادن"
+        android:layout_gravity="center_horizontal"
+        android:text="ثبت لغت"
+
         />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            tools:ignore="MissingConstraints"
+            android:visibility="invisible"
+            android:scrollbarSize="7dp"/>
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="20sp"/>
     </LinearLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
