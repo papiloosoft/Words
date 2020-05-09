@@ -15,7 +15,6 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light"
-        android:debuggable="true"
         tools:ignore="HardcodedDebugMode">
         <activity android:name=".Idea" /> <!-- Splash screen -->
         <activity

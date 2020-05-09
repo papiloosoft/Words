@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -36,6 +37,9 @@ public class SendWord extends AppCompatActivity {
         pb = findViewById(R.id.progressBar);
         pb.setVisibility(View.INVISIBLE);
         btnSend = findViewById(R.id.btnSend);
+
+        getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
         //add value in spinner

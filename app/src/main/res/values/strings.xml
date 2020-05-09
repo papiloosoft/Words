@@ -167,6 +167,10 @@
         <item>شیوار.shivaar.دره</item>
         <item>شورگه.shurge.غسال خانه</item>
     </string-array>
+    <string-array name="WordsMaz4">
+        <item>شونگ.شونگ.فریاد زدن</item>
+    </string-array>
+
     <string-array name="WordsMaz">
         <item>تندیر.تَندیر.تنور</item>
         <item>پیلکا.پیلکا.ظرف ماست</item>
@@ -192,7 +196,6 @@
         <item>مرغنه.مِرغِنه.تخم مرغ</item>
         <item>بیشتی.بیشتی.ته دیگ </item>
         <item>باکله.باکِلِه.باقالی </item>
-        <item>شونگ.شونگ.فریاد زدن</item>
         <item>اوخار.اُوخار.آخور</item>
         <item>پندیک.پِندیک.ویشکون </item>
     </string-array>
