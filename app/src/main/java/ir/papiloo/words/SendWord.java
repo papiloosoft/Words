@@ -65,7 +65,13 @@ public class SendWord extends AppCompatActivity {
                 w =  word.getText().toString();
                 m = mean.getText().toString();
                 p = pronounce.getText().toString();
-                String URI_SHOW_PARAMS = "https://Papiloo.ir/Papiloo/Game/Insert.php"+"?"+"Language=" + language + "&Word="+w+"&Mean="+m+"&Pronounce="+p;
+                if(!w.isEmpty())
+                {
+                    txtResult.setText("کلمه را بنویسید");
+                    return;
+                }
+                String URI_SHOW_PARAMS = "https://Papiloo.ir/Papiloo/Game/Insert.php"+"?"+"Language=" +
+                        language + "&Word="+w+"&Mean="+m+"&Pronounce="+p;
 
 
                 MyHttpUtils.RequestData requestData =
