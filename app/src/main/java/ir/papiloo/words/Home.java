@@ -27,6 +27,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.util.ArrayList;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -34,7 +35,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Home extends AppCompatActivity {
 
-    /* Views */
+    ReadSite.myDatabaseHelper mydb;
     TextView bestTxt;
     ListView mList;
     ArrayList<Item> arrayItem;
@@ -55,6 +56,14 @@ public class Home extends AppCompatActivity {
         // Hide Status bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        if (!new File("/data/data/" + this.getPackageName()
+                + "/databases/word.sqlite").exists()) {
+            mydb = new ReadSite.myDatabaseHelper(this);
+            boolean a = mydb.insertData(1, "سمنانی", "ونگون",
+                    "بادمجان",
+                    "وِنگون","");
+
+        }
         //test send to site
         Button btntest=(Button) findViewById(R.id.testSite);
         btntest.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +97,7 @@ public class Home extends AppCompatActivity {
                 if (Item.getItemId()==R.id.nav_idea)
                 {
                     startActivity(new Intent(Home.this, Idea.class));
+
                     return true;
 
                 }

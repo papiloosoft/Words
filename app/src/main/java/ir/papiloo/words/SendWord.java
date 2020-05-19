@@ -1,12 +1,7 @@
 package ir.papiloo.words;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
-import android.os.AsyncTask;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
@@ -15,30 +10,39 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class SendWord extends AppCompatActivity {
 
-
-    Button btnSend;
+    RequestQueue requestQueue;
+    Button btnSend,btnHome;
     TextView word,mean,pronounce,txtResult;
     Spinner category;
     ProgressBar pb;
-    List<AsyncTask> tasks = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.send_word);
+
         word = findViewById(R.id.txtWord);
         mean = findViewById(R.id.txtMeansWord);
-        pronounce = findViewById(R.id.pronounce);
+        pronounce = findViewById(R.id.txtPronounce);
         txtResult = findViewById(R.id.result);
         pb = findViewById(R.id.progressBar);
         pb.setVisibility(View.INVISIBLE);
         btnSend = findViewById(R.id.btnSend);
+        btnHome=findViewById(R.id.btnHome);
+        requestQueue = Volley.newRequestQueue(getApplicationContext());
 
-        getSupportActionBar().hide();
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
@@ -59,13 +63,13 @@ public class SendWord extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-
+                txtResult.setText("");
                 String language,w,m,p;
                 language= category.getSelectedItem().toString();
                 w =  word.getText().toString();
                 m = mean.getText().toString();
                 p = pronounce.getText().toString();
-                if(!w.isEmpty())
+                if(w.isEmpty())
                 {
                     txtResult.setText("کلمه را بنویسید");
                     return;
@@ -73,51 +77,39 @@ public class SendWord extends AppCompatActivity {
                 String URI_SHOW_PARAMS = "https://Papiloo.ir/Papiloo/Game/Insert.php"+"?"+"Language=" +
                         language + "&Word="+w+"&Mean="+m+"&Pronounce="+p;
 
+                URI_SHOW_PARAMS=URI_SHOW_PARAMS.replace(" ","%20");
+                StringRequest request=new StringRequest(
+                        Request.Method.GET,
+                        URI_SHOW_PARAMS,
+                        response -> {
+                            txtResult.setText(response);
+                            pb.setVisibility(View.INVISIBLE);
+                            word.setText("");
+                            mean.setText("");
+                            pronounce.setText("");
+                            word.requestFocus();
+                        },
+                        error -> {
+                            txtResult.setText("لغت ثبت نشد");
+                            pb.setVisibility(View.INVISIBLE);
+                        });
 
-                MyHttpUtils.RequestData requestData =
-                        new MyHttpUtils.RequestData(URI_SHOW_PARAMS,"GET");
-                //requestData.setParameter("name","AmirRasooli");
-                new MyTask().execute(requestData);
+                requestQueue.add(request);
+
 
             }
         });
 
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SendWord.this,Home.class));
+                finish();
+            }
+        });
+
+
     }
 
-    public class  MyTask extends AsyncTask<MyHttpUtils.RequestData,Void ,String>
-    {
-
-        @Override
-        protected void onPreExecute()
-        {
-            txtResult.setText("");
-            if(tasks.isEmpty())
-            {
-                pb.setVisibility(View.VISIBLE);
-            }
-            tasks.add(this);
-        }
-
-        @Override
-        protected String doInBackground(MyHttpUtils.RequestData... params) {
-            MyHttpUtils.RequestData reqData = params[0];
-            return  MyHttpUtils.getDataHttpUrlConnection(reqData);
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-
-            if (result == null)
-            {
-                result = "اتصال اینرنت را بررسی کنید";
-
-            }
-            txtResult.setText(result);
-            tasks.remove(this);
-            if(tasks.isEmpty())
-            {
-                pb.setVisibility(View.INVISIBLE);
-            }
-        }
-    }
 }
+
